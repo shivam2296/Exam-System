@@ -1,54 +1,44 @@
-/////////////////////////////////////////
+
+
+create table subject6(
+q_no number(2) unique NOT NULL,
+ques varchar(1000) NOT NULL,
+op_1 varchar(20),
+op_2 varchar(20),
+op_3 varchar(20),
+op_4 varchar(20),
+c_op varchar(1) NOT NULL
+);
+
+
+
+create table student_register(stud_roll varchar(10),stud_name varchar(25),age number(2),sex varchar(1));
+
+create table subject7(
+q_no number(2) unique NOT NULL,
+ques varchar(1000) NOT NULL,
+op_1 varchar(20),
+op_2 varchar(20),
+op_3 varchar(20),
+op_4 varchar(20),
+c_op varchar(1) NOT NULL
+);
+
+create table subject8(
+q_no number(2) unique NOT NULL,
+ques varchar(1000) NOT NULL,
+op_1 varchar(20),
+op_2 varchar(20),
+op_3 varchar(20),
+op_4 varchar(20),
+c_op varchar(1) NOT NULL
+);
+
+create table result(r_no varchar(10),sub_id varchar(10),obt_marks number(2));
+
+
 create table SUBJECTID(
-sub_id varchar(5) primary key,sub_name varchar(50) NOT NULL);
-
-/////////////////////////////////////////
-create table STUDENTDETAILS(
-s_id varchar(10) primary key,s_name varchar(20) NOT NULL,password varchar(20) NOT NULL,email varchar(50) , mob_no NUMBER(10) , s_dob varchar(12) 
-);
-
-////////////////////////////////////////
-create table result( s_id varchar(10) REFERENCES STUDENTDETAILS(s_id), marks NUMBER(3));
-////////
-
-create table subject1(
-q_no number(2) unique NOT NULL,
-ques varchar(1000) NOT NULL,
-op_1 varchar(20),
-op_2 varchar(20),
-op_3 varchar(20),
-op_4 varchar(20),
-c_op char(1) NOT NULL,
-res_op char(1) NOT NULL,
-obt_marks NUMBER(1) ,
-s_id varchar(10) REFERENCES STUDENTDETAILS(s_id),
-sub_id varchar(5) REFERENCES SUBJECTID(sub_id)
-);
-
-create table subject2(
-q_no number(2) unique NOT NULL,
-ques varchar(1000) NOT NULL,
-op_1 varchar(20),
-op_2 varchar(20),
-op_3 varchar(20),
-op_4 varchar(20),
-c_op char(1) NOT NULL,
-res_op char(1) NOT NULL,
-obt_marks NUMBER(1) ,
-s_id varchar(10) REFERENCES STUDENTDETAILS(s_id),
-sub_id varchar(5) REFERENCES SUBJECTID(sub_id)
-);
-
-create table subject3(
-q_no number(2) unique NOT NULL,
-ques varchar(1000) NOT NULL,
-op_1 varchar(20),
-op_2 varchar(20),
-op_3 varchar(20),
-op_4 varchar(20),
-c_op char(1) NOT NULL,
-res_op char(1) NOT NULL,
-obt_marks NUMBER(1) ,
-s_id varchar(10) REFERENCES STUDENTDETAILS(s_id),
-sub_id varchar(5) REFERENCES SUBJECTID(sub_id)
+sub_id varchar(10),
+sub_name varchar(50),
+S_NO int
 );
